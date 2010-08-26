@@ -3,7 +3,7 @@
 Plugin Name: Recipe of the Day
 Plugin URI: http://wordpress.org/extend/plugins/recipe-of-the-day/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
-Version: 1.0
+Version: 1.1
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wp-social-bookmarking/
 License: GPL2
@@ -129,4 +129,6 @@ function recipe_day_widget_Init()
   register_widget_control(__('Recipe of the Day'), 'recipe_day_widget_Admin', 500, 250);
 }
 add_action("plugins_loaded", "recipe_day_widget_Init");
+
+
 ?>
