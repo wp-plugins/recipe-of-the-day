@@ -129,6 +129,4 @@ function recipe_day_widget_Init()
   register_widget_control(__('Recipe of the Day'), 'recipe_day_widget_Admin', 500, 250);
 }
 add_action("plugins_loaded", "recipe_day_widget_Init");
-
-
 ?>

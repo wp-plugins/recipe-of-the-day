@@ -29,4 +29,6 @@ Please see <a href="http://www.onlinerel.com/wp-social-bookmarking/">FAQ</a>.
 == Changelog ==
 
  = 1.0 =
+ 
  First stable version.
+ 
