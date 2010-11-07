@@ -3,7 +3,7 @@
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
-Version: 1.6
+Version: 1.7
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 License: GPL2
@@ -106,22 +106,36 @@ function recipe_day_options() {
 <p><b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
 <p> <h3>Add the widget "Recipe of the Day"  to your sidebar from Appearance->Widgets and configure the widget options.</h3></p>
  <hr /> <hr />
- 
-  		<h2>Joke of the Day</h2>
+
+ <h2>Funny video online</h2>
+<p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
+Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-video-online/">Funny video online</h3></a> 
+ <hr /> <hr />
+   		<h2>Joke of the Day</h2>
 <p><b>Plugin "Joke of the Day" displays categorized jokes on your blog. There are over 40,000 jokes in 40 categories. Jokes are saved on our database, so you don't need to have space for all that information. </b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/joke-of-the-day/">Joke of the Day</h3></a>
    <hr /> <hr />
- 
+ <h2>Real Estate Finder</h2>
+<p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
+Real estate search for U.S., Canada, UK, Australia</b> </p>
+<h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
+ <hr /> <hr />
+
+ <h2>Jobs Finder</h2>
+<p><b>Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
+Jobs search for U.S., Canada, UK, Australia</b> </p>
+<h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/jobs-finder/">Jobs Finder</h3></a>
+ <hr /> <hr />
+
  <h2>WP Social Bookmarking</h2>
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
 <p><b>Plugin suport sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>. This helps to promote your blog and get more traffic.</b></p>
-
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
 	<li><a target="_blank" href="http://www.onlinerel.com/">OnlineRel</a></li>
 	<li><a target="_blank" href="http://www.easyfreeads.com/">Easy Free Ads</a></li>
 	<li><a target="_blank" href="http://www.worldestatesite.com/">World Estate Site</a></li>
-	<li><a target="_blank" href="http://www.facebook.com/pages/EasyFreeAds/106166672771355">Promote site on Facebook</a></li>	
 </ul>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/wp-social-bookmarking/">WP Social Bookmarking</h3></a>
 </p>
