@@ -3,17 +3,14 @@
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
-Version: 1.7
+Version: 1.8
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 License: GPL2
 */
-
-define(recipe_day_READER_URL_RSS_DEFAULT, 'http://www.findbestfood.net/feed');
-define(recipe_day_READER_TITLE, 'Recipe of the Day');
+define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/feed/');
+define(recipe_day_TITLE, 'Recipe of the Day');
 define(recipe_day_MAX_SHOWN_ITEMS, 10);
-define(recipe_day_DESCRIPTION_COUNT_CHARS, 500);
-
 
 function recipe_day_widget_ShowRss($args)
 {
@@ -27,12 +24,11 @@ function recipe_day_widget_ShowRss($args)
 	$options = get_option('recipe_day_widget');
 
 	if( $options == false ) {
-		$options[ 'recipe_day_widget_url_title' ] = recipe_day_READER_TITLE;
-		$options[ 'recipe_day_widget_RSS_url' ] = recipe_day_READER_URL_RSS_DEFAULT;
+		$options[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
 		$options[ 'recipe_day_widget_RSS_count_items' ] = recipe_day_MAX_SHOWN_ITEMS;
 	}
 
- $RSSurl = recipe_day_READER_URL_RSS_DEFAULT;
+ $RSSurl = recipe_day_URL_RSS_DEFAULT;
 	$messages = fetch_rss($RSSurl);
 	$title = $options[ 'recipe_day_widget_url_title' ];
 	
@@ -42,7 +38,7 @@ function recipe_day_widget_ShowRss($args)
 		for($i=0; $i<$options['recipe_day_widget_RSS_count_items'] && $i<$messages_count; $i++)
 		{			
 			$output .= '<li>';
-			$output .= '<a href="'.$messages->items[$i]['link'].'?ad=1">'.$messages->items[$i]['title'].'</a></span>';						
+			$output .= '<a href="'.$messages->items[$i]['link'].'">'.$messages->items[$i]['title'].'</a></span>';						
 				$output .= '</li>';
 		}
 		$output .= '</ul>';
@@ -63,13 +59,11 @@ function recipe_day_widget_Admin()
 	$options = $newoptions = get_option('recipe_day_widget');	
 	//default settings
 	if( $options == false ) {
-		$newoptions[ 'recipe_day_widget_url_title' ] = recipe_day_READER_TITLE;
-		$newoptions[ 'recipe_day_widget_RSS_url' ] = recipe_day_READER_URL_RSS_DEFAULT;
+		$newoptions[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
 		$newoptions['recipe_day_widget_RSS_count_items'] = recipe_day_MAX_SHOWN_ITEMS;		
 	}
 	if ( $_POST["recipe_day_widget-submit"] ) {
 		$newoptions['recipe_day_widget_url_title'] = strip_tags(stripslashes($_POST["recipe_day_widget_url_title"]));
-		$newoptions['recipe_day_widget_RSS_url'] = recipe_day_READER_URL_RSS_DEFAULT;
 		$newoptions['recipe_day_widget_RSS_count_items'] = strip_tags(stripslashes($_POST["recipe_day_widget_RSS_count_items"]));
 	}	
 		
@@ -78,7 +72,6 @@ function recipe_day_widget_Admin()
 		update_option('recipe_day_widget', $options);		
 	}
 	$recipe_day_widget_url_title = wp_specialchars($options['recipe_day_widget_url_title']);
-	$recipe_day_widget_RSS_url = recipe_day_READER_URL_RSS_DEFAULT;	
 	$recipe_day_widget_RSS_count_items = $options['recipe_day_widget_RSS_count_items'];
 	
 	?><form method="post" action="">	
@@ -98,15 +91,28 @@ add_action('admin_menu', 'recipe_day_menu');
 function recipe_day_menu() {
 	add_options_page('Recipe of the Day', 'Recipe of the Day', 8, __FILE__, 'recipe_day_options');
 }
-
+add_filter("plugin_action_links", 'recipe_day_ActionLink', 10, 2);
+function recipe_day_ActionLink( $links, $file ) {
+	    static $this_plugin;		
+		if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__); 
+        if ( $file == $this_plugin ) {
+			$settings_link = "<a href='".admin_url( "options-general.php?page=".$this_plugin )."'>". __('Settings') ."</a>";
+			array_unshift( $links, $settings_link );
+		}
+		return $links;
+	}
 function recipe_day_options() {	
 	?>
 	<div class="wrap">
 		<h2>Recipe of the Day</h2>
 <p><b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
-<p> <h3>Add the widget "Recipe of the Day"  to your sidebar from Appearance->Widgets and configure the widget options.</h3></p>
+<p> <h3>Add the widget "Recipe of the Day"  to your sidebar from <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3></p>
  <hr /> <hr />
-
+ <h2>Funny photos</h2>
+<p><b>Plugin "Funny Photos" displays Best photos of the day and Funny photos on your blog. There are over 5,000 photos.
+Add Funny Photos to your sidebar on your blog using  a widget.</b> </p>
+ <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/funny-photos/">Funny photos</h3></a> 
+ <hr />
  <h2>Funny video online</h2>
 <p><b>Plugin "Funny video online" displays Funny video on your blog. There are over 10,000 video clips.
 Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
@@ -130,7 +136,7 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 
  <h2>WP Social Bookmarking</h2>
 <p><b>WP-Social-Bookmarking plugin will add a image below your posts, allowing your visitors to share your posts with their friends, on FaceBook, Twitter, Myspace, Friendfeed, Technorati, del.icio.us, Digg, Google, Yahoo Buzz, StumbleUpon.</b></p>
-<p><b>Plugin suport sharing your posts feed on <a href="http://www.onlinerel.com/">OnlineRel</a>. This helps to promote your blog and get more traffic.</b></p>
+<p><b>Plugin suport sharing your posts feed on <a href="http://www.easyfreeads.com/">Easy Free Ads</a>. This helps to Promotion your blog and get more traffic.</b></p>
 <p>Advertise your real estate, cars, items... Buy, Sell, Rent. Free promote your site:
 <ul>
 	<li><a target="_blank" href="http://www.onlinerel.com/">OnlineRel</a></li>
