@@ -20,9 +20,7 @@ function recipe_day_widget_ShowRss($args)
 	} else {
 		require_once(ABSPATH . WPINC . '/rss-functions.php');
 	}
-	
-	$options = get_option('recipe_day_widget');
-
+$options = get_option('recipe_day_widget');
 	if( $options == false ) {
 		$options[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
 		$options[ 'recipe_day_widget_RSS_count_items' ] = recipe_day_MAX_SHOWN_ITEMS;
