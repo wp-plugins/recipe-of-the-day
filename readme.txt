@@ -17,7 +17,6 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 If you're interested in seeing what a default installation of Recipe of the Day has to offer, try out the <a target="_blank" href="http://www.findbestfood.net/">Recipe of the Day</a>
 
 
-
 == Installation ==
 
 1. Upload the folder recipe-of-the-day to the /wp-content/plugins/ directory
@@ -34,7 +33,7 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 2.0 =
+ = 2.1 =
 Changed works upto 3.0.3 WP 
 
  = 1.9 =
