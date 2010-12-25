@@ -1,14 +1,13 @@
 <?php
 /*
 Plugin Name: Recipe of the Day
+Version: 2.2
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
-Version: 2.1
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
-License: GPL2
 */
-
+ 
 define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/feed/');
 define(recipe_day_TITLE, 'Recipe of the Day');
 define(recipe_day_MAX_SHOWN_ITEMS, 10);
