@@ -2,7 +2,7 @@
 /*
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 2.5
+Version: 2.6
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
@@ -25,8 +25,9 @@ $options = get_option('recipe_day_widget');
 		$options[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
 		$options[ 'recipe_day_widget_RSS_count_items' ] = recipe_day_MAX_SHOWN_ITEMS;
 	}
-
- $RSSurl = recipe_day_URL_RSS_DEFAULT;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+																																																																																																								
+	$RSSurl = recipe_day_URL_RSS_DEFAULT;
 	$messages = fetch_rss($RSSurl);
 	$title = $options[ 'recipe_day_widget_url_title' ];
 	
@@ -42,7 +43,9 @@ $options = get_option('recipe_day_widget');
 		$output .= '</ul>';
 	}
 	
+
 	extract($args);	
+
 	?>
 	<?php echo $before_widget; ?>
 	<?php echo $before_title . $title . $after_title; ?>	
@@ -89,7 +92,9 @@ add_action('admin_menu', 'recipe_day_menu');
 function recipe_day_menu() {
 	add_options_page('Recipe of the Day', 'Recipe of the Day', 8, __FILE__, 'recipe_day_options');
 }
+
 add_filter("plugin_action_links", 'recipe_day_ActionLink', 10, 2);
+
 function recipe_day_ActionLink( $links, $file ) {
 	    static $this_plugin;		
 		if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__); 
@@ -101,6 +106,7 @@ function recipe_day_ActionLink( $links, $file ) {
 	}
 function recipe_day_options() {	
 	?>
+
 	<div class="wrap">
 		<h2>Recipe of the Day</h2>
 <p><b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
@@ -157,5 +163,6 @@ function recipe_day_widget_Init()
   register_sidebar_widget(__('Recipe of the Day'), 'recipe_day_widget_ShowRss');
   register_widget_control(__('Recipe of the Day'), 'recipe_day_widget_Admin', 500, 250);
 }
+
 add_action("plugins_loaded", "recipe_day_widget_Init");
 ?>
