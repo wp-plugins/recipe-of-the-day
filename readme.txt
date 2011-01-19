@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.onlinerel.com/wordpress-plugins/
 Tags: widget, recipe, recipes, video recipes, post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
 Requires at least: 2.5
-Tested up to: 3.0.3
+Tested up to: 3.1
 Stable tag: trunk
 
 Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories.
@@ -33,8 +33,8 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 2.2 =
-Changed works upto 3.0.3 WP 
+ = 2.3 =
+Tested upto 3.1 WP 
 
  = 1.9 =
  Fix bugs.
