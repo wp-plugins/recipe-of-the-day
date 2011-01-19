@@ -6,6 +6,7 @@ Requires at least: 2.5
 Tested up to: 3.1
 Stable tag: trunk
 
+
 Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories.
  
 == Description ==
@@ -33,10 +34,10 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 2.4 =
+ = 2.5 =
 Tested upto 3.1 WP.
 
- = 2.3 =
+ = 2.4 =
  Fix bugs.
 
  = 1.7 =
