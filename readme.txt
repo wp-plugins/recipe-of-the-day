@@ -33,10 +33,10 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
- = 2.3 =
-Tested upto 3.1 WP 
+ = 2.4 =
+Tested upto 3.1 WP.
 
- = 1.9 =
+ = 2.3 =
  Fix bugs.
 
  = 1.7 =
