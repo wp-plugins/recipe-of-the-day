@@ -34,6 +34,9 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
+ = 2.7 =
+ Fix feed links.                                                                                        
+
  = 2.6 =
  Fix bugs.
 

@@ -2,57 +2,50 @@
 /*
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 2.6
+Version: 2.7
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
  
-define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/feed/');
+define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/category/drinks/cocktails/feed/');
 define(recipe_day_TITLE, 'Recipe of the Day');
 define(recipe_day_MAX_SHOWN_ITEMS, 10);
 
 function recipe_day_widget_ShowRss($args)
 {
-	//@ini_set('allow_url_fopen', 1);	
-	if( file_exists( ABSPATH . WPINC . '/rss.php') ) {
-		require_once(ABSPATH . WPINC . '/rss.php');		
-	} else {
-		require_once(ABSPATH . WPINC . '/rss-functions.php');
-	}
-$options = get_option('recipe_day_widget');
+ $options = get_option('recipe_day_widget');
 	if( $options == false ) {
 		$options[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
 		$options[ 'recipe_day_widget_RSS_count_items' ] = recipe_day_MAX_SHOWN_ITEMS;
 	}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-																																																																																																								
-	$RSSurl = recipe_day_URL_RSS_DEFAULT;
-	$messages = fetch_rss($RSSurl);
+
+ $feed = recipe_day_URL_RSS_DEFAULT; 
 	$title = $options[ 'recipe_day_widget_url_title' ];
-	
-	$messages_count = count($messages->items);
-	if($messages_count != 0){
-		$output = '<ul>';		
-		for($i=0; $i<$options['recipe_day_widget_RSS_count_items'] && $i<$messages_count; $i++)
-		{			
-			$output .= '<li>';
-			$output .= '<a href="'.$messages->items[$i]['link'].'">'.$messages->items[$i]['title'].'</a></span>';						
-				$output .= '</li>';
-		}
-		$output .= '</ul>';
+
+ $rss = fetch_feed( $feed );
+		if ( !is_wp_error( $rss ) ) :
+			$maxitems = $rss->get_item_quantity($options['recipe_day_widget_RSS_count_items'] );
+			$items = $rss->get_items( 0, $maxitems );
+				endif;
+	 $output .= '<ul>';	
+	if($items) { 
+ 			foreach ( $items as $item ) :
+				// Create post object
+  $titlee = trim($item->get_title()); 
+  $output .= '<li> <a href="';
+ $output .=  $item->get_permalink();
+  $output .= '"  title="'.$titlee.'" target="_blank">';
+   $output .= $titlee.'</a> ';
+	 $output .= '</li>'; 
+   		endforeach;		
 	}
-	
-
+			$output .= '</ul> ';	 			
 	extract($args);	
-
-	?>
-	<?php echo $before_widget; ?>
-	<?php echo $before_title . $title . $after_title; ?>	
-	<?php echo $output; ?>
-	<?php echo $after_widget; ?>
-	<?php	
-}
+  echo $before_widget;  
+  echo $before_title . $title . $after_title;  
+ echo $output;  
+ echo $after_widget;                                                                                                                                                                                     }
 
 
 function recipe_day_widget_Admin()
