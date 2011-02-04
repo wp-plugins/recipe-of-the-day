@@ -6,7 +6,6 @@ Requires at least: 2.5
 Tested up to: 3.1
 Stable tag: trunk
 
-
 Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories.
  
 == Description ==
@@ -16,7 +15,6 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 <b>Try the Demo</b>
 
 If you're interested in seeing what a default installation of Recipe of the Day has to offer, try out the <a target="_blank" href="http://www.findbestfood.net/">Recipe of the Day</a>
-
 
 == Installation ==
 
@@ -33,6 +31,9 @@ If you're interested in seeing what a default installation of Recipe of the Day 
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
+
+ = 2.8.1 =
+ Updated feed system.                                                                                            
 
  = 2.7 =
  Fix feed links.                                                                                        
