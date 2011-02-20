@@ -2,14 +2,12 @@
 /*
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
-Version: 2.8.1
+Version: 2.8.2
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
- 
-
-define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/category/drinks/cocktails/feed/');
+define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/category/drinks/feed/');
 define(recipe_day_TITLE, 'Recipe of the Day');
 define(recipe_day_MAX_SHOWN_ITEMS, 10);
 
@@ -48,7 +46,6 @@ function recipe_day_widget_ShowRss($args)
  echo $output;  
  echo $after_widget;                                                                                                                                                                                     }
 
-
 function recipe_day_widget_Admin()
 {
 	$options = $newoptions = get_option('recipe_day_widget');	
@@ -68,13 +65,10 @@ function recipe_day_widget_Admin()
 	}
 	$recipe_day_widget_url_title = wp_specialchars($options['recipe_day_widget_url_title']);
 	$recipe_day_widget_RSS_count_items = $options['recipe_day_widget_RSS_count_items'];
-	
-	?><form method="post" action="">	
 
-	<p><label for="recipe_day_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="recipe_day_widget_url_title" name="recipe_day_widget_url_title" type="text" value="<?php echo $recipe_day_widget_url_title; ?>" /></label></p>
- 
-	<p><label for="recipe_day_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="recipe_day_widget_RSS_count_items" name="recipe_day_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $recipe_day_widget_RSS_count_items?>" /></label></p>
-	
+	?><form method="post" action="">	
+	<p><label for="recipe_day_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="recipe_day_widget_url_title" name="recipe_day_widget_url_title" type="text" value="<?php echo $recipe_day_widget_url_title; ?>" /></label></p> 
+	<p><label for="recipe_day_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="recipe_day_widget_RSS_count_items" name="recipe_day_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $recipe_day_widget_RSS_count_items?>" /></label></p>	
 	<br clear='all'></p>
 	<input type="hidden" id="recipe_day_widget-submit" name="recipe_day_widget-submit" value="1" />	
 	</form>
@@ -105,8 +99,7 @@ function recipe_day_options() {
 <p>
 <b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
 <p> <h3>Add the widget "Recipe of the Day"  to your sidebar from <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
-</p>
- <hr /> <hr />
+</p>  <hr /> <hr />
 <h2>Blog Promotion</h2>
 <p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
@@ -132,7 +125,6 @@ Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
 Real estate search for U.S., Canada, UK, Australia</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/real-estate-finder/">Real Estate Finder</h3></a>
  <hr />
-
  <h2>Jobs Finder</h2>
 <p><b>Plugin "Jobs Finder" gives visitors the opportunity to more than 1 million offer of employment.
 Jobs search for U.S., Canada, UK, Australia</b> </p>
@@ -151,14 +143,11 @@ Jobs search for U.S., Canada, UK, Australia</b> </p>
 <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/wp-social-bookmarking/">WP Social Bookmarking</h3></a>
 </p>
 	</div>
-	<?php
-}
-
+<?php }
 function recipe_day_widget_Init()
 {
   register_sidebar_widget(__('Recipe of the Day'), 'recipe_day_widget_ShowRss');
   register_widget_control(__('Recipe of the Day'), 'recipe_day_widget_Admin', 500, 250);
 }
-
 add_action("plugins_loaded", "recipe_day_widget_Init");
 ?>
