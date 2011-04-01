@@ -33,6 +33,9 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 == Changelog ==
 
  = 2.8.2 =
+ Fix bugs.
+
+ = 2.8.2 =
  Fixed feed system.      
 
  = 2.8.1 =
