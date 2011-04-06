@@ -30,11 +30,13 @@ If you're interested in seeing what a default installation of Recipe of the Day 
 
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
+
 == Changelog ==
 
- = 2.9.1 =
- Fix bugs.
- Updated feed system.  
+ = 2.9.2 =
+*  Fix bugs.
+*  Updated feed system.  
+*  Updated tags
 
  = 2.8.2 =
  Fixed feed system.      
@@ -65,3 +67,9 @@ Updated tags
 
   = 1.1 =
  First stable version.
+
+
+ == Upgrade Notice ==
+  
+= 2.9.2 =
+Automatically upgrade the plugin and all previous settings should remain intact.
