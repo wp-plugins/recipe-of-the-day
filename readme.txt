@@ -33,6 +33,9 @@ Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
 == Changelog ==
 
+ = 2.9.3 =
+Tested upto 3.1.1 WP.
+
  = 2.9.2 =
 *  Fix bugs.
 *  Updated feed system.  
@@ -71,5 +74,5 @@ Updated tags
 
  == Upgrade Notice ==
   
-= 2.9.2 =
+= 2.9.3 =
 Automatically upgrade the plugin and all previous settings should remain intact.
