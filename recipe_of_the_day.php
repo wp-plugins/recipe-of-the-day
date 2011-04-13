@@ -1,13 +1,12 @@
 <?php
 /*
 Plugin Name: Recipe of the Day
-Version: 2.9.3
+Version: 2.9.4
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
-
 define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/feed/');
 //define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/category/drinks/feed/');
 define(recipe_day_TITLE, 'Recipe of the Day');
@@ -23,13 +22,12 @@ function recipe_day_widget_ShowRss($args)
 
  $feed = recipe_day_URL_RSS_DEFAULT; 
 	$title = $options[ 'recipe_day_widget_url_title' ];
-
  $rss = fetch_feed( $feed );
 		if ( !is_wp_error( $rss ) ) :
 			$maxitems = $rss->get_item_quantity($options['recipe_day_widget_RSS_count_items'] );
 			$items = $rss->get_items( 0, $maxitems );
 				endif;
-	 $output .= '<ul>';	
+	 $output .= '<!-- WP plugin  Recipe of the Day --> <ul>';	
 	if($items) { 
  			foreach ( $items as $item ) :
 				// Create post object                                                           
@@ -104,7 +102,6 @@ function recipe_day_options() {
 <p> <h3>Add the widget "Recipe of the Day"  to your sidebar from <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
 </p>
 <hr /> <hr />   
-
 <h2>Blog Promotion</h2>
 <p><b>If you produce original news or entertainment content, you can tap into one of the most technologically advanced traffic exchanges among blogs! Start using our Blog Promotion plugin on your site and receive 150%-300% extra traffic free! 
 Idea is simple - the more traffic you send to us, the more we can send you back.</b> </p>
@@ -128,7 +125,6 @@ Add Funny YouTube videos to your sidebar on your blog using  a widget.</b> </p>
 <p><b>Plugin "Joke of the Day" displays categorized jokes on your blog. There are over 40,000 jokes in 40 categories. Jokes are saved on our database, so you don't need to have space for all that information. </b> </p>
  <h3>Get plugin <a target="_blank" href="http://wordpress.org/extend/plugins/joke-of-the-day/">Joke of the Day</h3></a>
    <hr />
-
  <h2>Real Estate Finder</h2>
 <p><b>Plugin "Real Estate Finder" gives visitors the opportunity to use a large database of real estate.
 Real estate search for U.S., Canada, UK, Australia</b> </p>
