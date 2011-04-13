@@ -30,7 +30,6 @@ If you're interested in seeing what a default installation of Recipe of the Day 
 
 Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
 
-
 == Changelog ==
 
  = 2.9.4 =
@@ -73,7 +72,6 @@ Updated tags
 
   = 1.1 =
  First stable version.
-
 
  == Upgrade Notice ==
   
