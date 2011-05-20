@@ -80,8 +80,8 @@ Updated tags
   
 = 2.9.5 =
 Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.2 WP.
+Tested upto 3.1.2 WP.                                                         
 
 = 2.9.4 =
 Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.1 WP.
+Tested upto 3.1.1 WP.                                               
