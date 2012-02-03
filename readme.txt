@@ -12,11 +12,7 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 
 Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
 
-<b>Try the Demo</b>
-
-If you're interested in seeing what a default installation of Recipe of the Day has to offer, try out the <a target="_blank" href="http://www.findbestfood.net/">Recipe of the Day</a>
-
-== Installation ==
+ == Installation ==
 
 1. Upload the folder recipe-of-the-day to the /wp-content/plugins/ directory
 2. Activate the plugin Recipe of the Day through the 'Plugins' menu in WordPress
@@ -25,10 +21,7 @@ If you're interested in seeing what a default installation of Recipe of the Day 
 == Screenshots ==
 
 1. Recipe of the Day Widget
-
-== Frequently Asked Questions ==
-
-Please see <a href="http://www.onlinerel.com/wordpress-plugins/">FAQ</a>.
+ 
 
 == Changelog ==
 
