@@ -24,6 +24,9 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
  
 == Changelog ==
 
+= 3.2 =
+* Updated code
+
 = 3.1 =
 * Updated code
 
@@ -44,9 +47,6 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 *  Fix bugs.
 *  Updated feed system.  
 *  Updated tags
-
- = 2.8.2 =
-*  Fixed feed system.      
 
  = 2.8.1 =
 *  Updated feed system.                                                                                            

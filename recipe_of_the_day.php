@@ -81,6 +81,16 @@ function recipe_day_widget_Admin()
 	<?php
 }
 
+function recipe_day7_widget_Admin()
+{
+	$options = $newoptions = get_option('recipe_day_widget');	
+                                                                
+	if( $options == false ) {
+		$newoptions[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
+		$newoptions['recipe_day_widget_RSS_count_items'] = recipe_day_MAX_SHOWN_ITEMS;		
+	}
+	 		}
+
 add_filter("plugin_action_links", 'recipe_day_ActionLink', 10, 2);
 
 function recipe_day_ActionLink( $links, $file ) {
