@@ -22,7 +22,6 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 
 1. Recipe of the Day Widget
  
-
 == Changelog ==
 
 = 3.1 =

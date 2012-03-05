@@ -32,7 +32,7 @@ function recipe_day_widget_ShowRss($args)
 			$maxitems = $rss->get_item_quantity($options['recipe_day_widget_RSS_count_items'] );
 			$items = $rss->get_items( 0, $maxitems );
 				endif;
-	 $output .= '<!-- WP plugin  Recipe of the Day --> <ul>';	
+ $output .= ' <!-- WP plugin:  Recipe of the Day --> <ul>';	
 	if($items) { 
  			foreach ( $items as $item ) :
 				// Create post object                                                           
@@ -72,8 +72,7 @@ function recipe_day_widget_Admin()
 	$recipe_day_widget_url_title = wp_specialchars($options['recipe_day_widget_url_title']);
 	$recipe_day_widget_RSS_count_items = $options['recipe_day_widget_RSS_count_items'];
 
-	?>
- 
+	?> 
 	<p><label for="recipe_day_widget_url_title"><?php _e('Title:'); ?> <input style="width: 350px;" id="recipe_day_widget_url_title" name="recipe_day_widget_url_title" type="text" value="<?php echo $recipe_day_widget_url_title; ?>" /></label></p> 
 	<p><label for="recipe_day_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="recipe_day_widget_RSS_count_items" name="recipe_day_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $recipe_day_widget_RSS_count_items?>" /></label></p>	
 	<br clear='all'></p>
@@ -102,8 +101,7 @@ function recipe_day_options() {
 <p> <h3>Add the widget "Recipe of the Day"  to your sidebar from <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
 <h3>More <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3></p>
 </p>
- 
-	</div>
+ 	</div>
 <?php }
 function recipe_day_widget_Init()
 {
