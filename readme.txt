@@ -1,7 +1,7 @@
 === Recipe of the Day ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: widget, recipe, recipes, video recipes, post, posts, link, links, promote, SEO, category, cloud, sidebar, feed, rss, popular
+Tags: widget, recipe, recipes, video recipes, post, promote, SEO, category, sidebar, feed, rss
 Requires at least: 2.5
 Tested up to: 3.3.1
 Stable tag: trunk
@@ -25,18 +25,21 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 
 == Changelog ==
 
+= 3.1 =
+* Updated code
+
 = 3.0 =
-Tested up to 3.3.1 WP     
-Updated script
+* Tested up to 3.3.1 WP     
+* Updated script
 
  = 2.9.5 =
-Tested upto 3.1.2 WP.
+* Tested upto 3.1.2 WP.
 
  = 2.9.4 =
-Tested upto 3.1.1 WP.
+* Tested upto 3.1.1 WP.
 
  = 2.9.3 =
- Updated feed links.      
+ * Updated feed links.      
 
  = 2.9.2 =
 *  Fix bugs.
@@ -44,41 +47,31 @@ Tested upto 3.1.1 WP.
 *  Updated tags
 
  = 2.8.2 =
- Fixed feed system.      
+*  Fixed feed system.      
 
  = 2.8.1 =
- Updated feed system.                                                                                            
+*  Updated feed system.                                                                                            
 
  = 2.7 =
- Fix feed links.                                                                                        
+*  Fix feed links.                                                                                        
 
  = 2.6 =
- Fix bugs.
+ * Fix bugs.
 
  = 2.5 =
-Tested upto 3.1 WP.
+* Tested upto 3.1 WP.
 
  = 2.4 =
- Fix bugs.
+*  Fix bugs.
 
  = 1.7 =
-Updated tags
+* Updated tags
 
  = 1.5 =
- Fix bugs.
+*  Fix bugs.
 
  = 1.3 =
- Updated tags
+*  Updated tags
 
   = 1.1 =
- First stable version.
-
- == Upgrade Notice ==
-  
-= 2.9.5 =
-Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.2 WP.                                                         
-
-= 2.9.4 =
-Automatically upgrade the plugin and all previous settings should remain intact.
-Tested upto 3.1.1 WP.                                               
+ * First stable version.                                      
