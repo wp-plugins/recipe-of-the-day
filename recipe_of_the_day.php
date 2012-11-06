@@ -3,11 +3,10 @@
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.onlinerel.com/wordpress-plugins/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
-Version: 3.2
+Version: 3.3
 Author: A.Kilius
 Author URI: http://www.onlinerel.com/wordpress-plugins/
 */
-
 define(recipe_day_URL_RSS_DEFAULT, 'http://www.findbestfood.net/category/drinks/feed/');
 define(recipe_day_TITLE, 'Recipe of the Day');
 define(recipe_day_MAX_SHOWN_ITEMS, 10);
@@ -77,8 +76,7 @@ function recipe_day_widget_Admin()
 	<p><label for="recipe_day_widget_RSS_count_items"><?php _e('Count Items To Show:'); ?> <input  id="recipe_day_widget_RSS_count_items" name="recipe_day_widget_RSS_count_items" size="2" maxlength="2" type="text" value="<?php echo $recipe_day_widget_RSS_count_items?>" /></label></p>	
 	<br clear='all'></p>
 	<input type="hidden" id="recipe_day_widget-submit" name="recipe_day_widget-submit" value="1" />	
- 
-	<?php
+ 	<?php
 }
 
 function recipe_day7_widget_Admin()
@@ -102,6 +100,7 @@ function recipe_day_ActionLink( $links, $file ) {
 		}
 		return $links;
 	}
+
 function recipe_day_options() {	
 	?>
 	<div class="wrap">
@@ -112,7 +111,9 @@ function recipe_day_options() {
 <h3>More <a href="http://www.onlinerel.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3></p>
 </p>
  	</div>
-<?php }
+	<?php
+		}
+
 function recipe_day_widget_Init()
 {
   register_sidebar_widget(__('Recipe of the Day'), 'recipe_day_widget_ShowRss');

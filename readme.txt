@@ -1,9 +1,9 @@
 === Recipe of the Day ===
 Contributors: allis741 
 Donate link: http://www.onlinerel.com/wordpress-plugins/
-Tags: widget, recipe, recipes, video recipes, post, promote, SEO, category, sidebar, feed, rss
+Tags: widget, recipe, recipes, video recipes, post, promote, sidebar, feed, rss
 Requires at least: 2.5
-Tested up to: 3.3.1
+Tested up to: 3.4.2
 Stable tag: trunk
 
 Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories.
@@ -23,6 +23,10 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 1. Recipe of the Day Widget
  
 == Changelog ==
+
+= 3.3 =
+* Tested up to 3.4.2 WP     
+* Updated script
 
 = 3.2 =
 * Updated code
