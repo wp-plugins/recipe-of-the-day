@@ -62,7 +62,7 @@ function recipe_day_widget_ShowRss($args)
 function recipe_day_widget_Admin()
 {
 	$options = $newoptions = get_option('recipe_day_widget');	
-	//default settings                                                                     
+                                                                
 	if( $options == false ) {
 		$newoptions[ 'recipe_day_widget_url_title' ] = recipe_day_TITLE;
 		$newoptions['recipe_day_widget_RSS_count_items'] = recipe_day_MAX_SHOWN_ITEMS;		
@@ -116,6 +116,7 @@ function recipe_day_options() {
 <p>
 <b>Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information.</b> </p>
 <p> <h3>Add the widget "Recipe of the Day"  to your sidebar from <a href="<? echo "./widgets.php";?>"> Appearance->Widgets</a>  and configure the widget options.</h3>
+
 <h3>More <a href="http://www.premiumresponsive.com/wordpress-plugins/" target="_blank"> WordPress Plugins</a></h3></p>
 </p>
  	</div>
