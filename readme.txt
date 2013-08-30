@@ -24,7 +24,7 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
  
 == Changelog ==
 
-= 3.5 =
+= 3.5.0 =
 * Tested up to 3.6 WP     
 * Changed new feed link
 
@@ -45,44 +45,6 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
 = 3.0 =
 * Tested up to 3.3.1 WP     
 * Updated script
-
- = 2.9.5 =
-* Tested upto 3.1.2 WP.
-
- = 2.9.4 =
-* Tested upto 3.1.1 WP.
-
- = 2.9.3 =
- * Updated feed links.      
-
- = 2.9.2 =
-*  Fix bugs.
-*  Updated feed system.  
-*  Updated tags
-
- = 2.8.1 =
-*  Updated feed system.                                                                                            
-
- = 2.7 =
-*  Fix feed links.                                                                                        
-
- = 2.6 =
- * Fix bugs.
-
- = 2.5 =
-* Tested upto 3.1 WP.
-
- = 2.4 =
-*  Fix bugs.
-
- = 1.7 =
-* Updated tags
-
- = 1.5 =
-*  Fix bugs.
-
- = 1.3 =
-*  Updated tags
 
   = 1.1 =
  * First stable version.                                      
