@@ -3,7 +3,7 @@ Contributors: allis741
 Donate link: http://www.premiumresponsive.com/wordpress-plugins/
 Tags: widget, recipe, recipes, video recipes, cooking, post, promote, sidebar, feed, rss
 Requires at least: 3.0
-Tested up to: 3.6
+Tested up to: 4.1.1
 Stable tag: trunk
 
 Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories.
