@@ -3,7 +3,7 @@
 Plugin Name: Recipe of the Day
 Plugin URI: http://www.premiumresponsive.com/wordpress-plugins/
 Description: Plugin "Recipe of the Day" displays categorized recipes on your blog. There are over 20,000 recipes in 40 categories. Recipes are saved on our database, so you don't need to have space for all that information. 
-Version: 3.5.0
+Version: 3.6
 Author: A.Kilius
 Author URI: http://www.premiumresponsive.com/wordpress-plugins/
 */

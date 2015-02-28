@@ -24,6 +24,10 @@ Plugin "Recipe of the Day" displays categorized recipes on your blog. There are 
  
 == Changelog ==
 
+= 3.6 =
+* Tested up to 4.1.1 WP     
+* Updated code
+
 = 3.5.0 =
 * Tested up to 3.6 WP     
 * Changed new feed link
